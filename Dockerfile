@@ -4,11 +4,11 @@ ARG GIT_BUILD_HASH
 ARG VERSION
 ARG S6_VERSION=3.2.0.2
 
-LABEL org.opencontainers.image.url https://github.com/authentik-community/krb5-docker
-LABEL org.opencontainers.image.description Run an MIT Kerberos 5 KDC in a container
-LABEL org.opencontainers.image.source https://github.com/authentik-community/krb5-docker.git
-LABEL org.opencontainers.image.version ${VERSION}
-LABEL org.opencontainers.image.revision ${GIT_BUILD_HASH}
+LABEL org.opencontainers.image.url=https://github.com/authentik-labs/krb5-docker
+LABEL org.opencontainers.image.description="Run an MIT Kerberos 5 KDC in a container"
+LABEL org.opencontainers.image.source=https://github.com/authentik-labs/krb5-docker.git
+LABEL org.opencontainers.image.version=${VERSION}
+LABEL org.opencontainers.image.revision=${GIT_BUILD_HASH}
 
 ENV KRB5_CONFIG=/etc/krb5.conf \
   KRB5_KDC_PROFILE=/etc/krb5kdc/kdc.conf \

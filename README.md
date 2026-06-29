@@ -7,7 +7,7 @@ A container image to run MIT Kerberos 5, plus some other things that may be usef
 One-liner to get started:
 
 ```bash
-docker run -v ./data:/var/lib/krb5kdc -e KRB5_REALM=EXAMPLE.ORG -p 88:8888/tcp -p 88:8888/udp -p 464:8464/tcp -p 464:8464/udp -p 749:8749/tcp ghcr.io/authentik-community/krb5:<version>
+docker run -v ./data:/var/lib/krb5kdc -e KRB5_REALM=EXAMPLE.ORG -p 88:8888/tcp -p 88:8888/udp -p 464:8464/tcp -p 464:8464/udp -p 749:8749/tcp ghcr.io/authentik-labs/krb5:<version>
 ```
 
 On the first boot, the container will create necessary configurations and a KDC Master password and store it under `/var/lib/krb5kdc/master.pass` (in the container). You should save the contents of that file and then delete it.

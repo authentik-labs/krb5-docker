@@ -51,7 +51,7 @@ jobs:
           context: .
           push: "${{ github.ref == 'refs/heads/main' }}"
           tags: |
-            ghcr.io/authentik-community/krb5:${{ steps.ev.outputs.sha }}
+            ghcr.io/authentik-labs/krb5:${{ steps.ev.outputs.sha }}
           platforms: linux/amd64,linux/arm64
           build-args: |
             GIT_BUILD_HASH=${{ steps.ev.outputs.sha }}
